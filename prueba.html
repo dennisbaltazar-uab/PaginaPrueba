@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Tienda · Dennis Alexander</title>
+  <!-- Google Fonts para tipografía moderna -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (íconos gratuitos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #f5f0eb 0%, #e8e0d8 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Tarjeta principal – elegancia y calidez */
+    .store-card {
+      max-width: 1100px;
+      width: 100%;
+      background: rgba(255, 247, 242, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 4rem 4rem 3rem 3rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 
+                  inset 0 1px 2px rgba(255, 255, 255, 0.7);
+      padding: 2.5rem 2.8rem 3rem;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255, 235, 225, 0.5);
+    }
+
+    /* ===== MENÚ SUPERIOR (nav) ===== */
+    .store-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.2rem 1.8rem;
+      border-bottom: 2px solid rgba(180, 140, 120, 0.2);
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #4d2e1b;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-logo i {
+      font-size: 2rem;
+      color: #b8683e;
+      filter: drop-shadow(0 2px 4px rgba(180, 80, 30, 0.2));
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.3rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #3f2a1c;
+      font-weight: 500;
+      padding: 0.5rem 1.1rem;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      transition: 0.2s;
+      background: transparent;
+      letter-spacing: -0.2px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a i {
+      font-size: 1rem;
+      opacity: 0.7;
+    }
+
+    .nav-links a:hover {
+      background: rgba(190, 130, 100, 0.15);
+      color: #5d3220;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(120, 70, 40, 0.05);
+    }
+
+    .nav-links a:active {
+      transform: scale(0.96);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .nav-icon-btn {
+      background: rgba(200, 160, 140, 0.15);
+      border: none;
+      border-radius: 60px;
+      padding: 0.5rem 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #3f2a1c;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+      backdrop-filter: blur(4px);
+      background: rgba(235, 215, 200, 0.3);
+      border: 1px solid rgba(255, 225, 210, 0.6);
+    }
+
+    .nav-icon-btn i {
+      font-size: 1.1rem;
+      color: #7a4d31;
+    }
+
+    .nav-icon-btn:hover {
+      background: rgba(190, 140, 115, 0.25);
+      transform: scale(1.02);
+      border-color: rgba(170, 120, 90, 0.3);
+    }
+
+    .badge {
+      background: #b8683e;
+      color: white;
+      border-radius: 40px;
+      padding: 0.1rem 0.6rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-left: 2px;
+    }
+
+    /* ===== NOMBRE CENTRAL – protagonista ===== */
+    .hero-name {
+      text-align: center;
+      padding: 0.8rem 0.5rem 1.8rem;
+      margin: 1.2rem 0 1.5rem;
+      position: relative;
+    }
+
+    .hero-name h1 {
+      font-size: clamp(2.8rem, 12vw, 5.2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #2f1c10;
+      text-shadow: 0 4px 12px rgba(150, 90, 60, 0.12), 
+                   0 12px 30px rgba(100, 60, 30, 0.08);
+      background: linear-gradient(135deg, #3b2417, #5f3823);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+      display: inline-block;
+      padding: 0 0.4rem;
+      line-height: 1.1;
+    }
+
+    .hero-name h1::after {
+      content: "✦";
+      font-size: 2.2rem;
+      background: none;
+      -webkit-text-fill-color: initial;
+      color: #bc7a54;
+      opacity: 0.4;
+      margin-left: 10px;
+      display: inline-block;
+      font-weight: 300;
+    }
+
+    .hero-name h1::before {
+      content: "✦";
+      font-size: 2rem;
+      background: none;
+      -webkit-text-fill-color: initial;
+      color: #bc7a54;
+      opacity: 0.3;
+      margin-right: 12px;
+      display: inline-block;
+      font-weight: 300;
+    }
+
+    .hero-sub {
+      margin-top: 0.4rem;
+      font-size: 1.1rem;
+      color: #6b4d38;
+      letter-spacing: 3px;
+      font-weight: 400;
+      text-transform: uppercase;
+      opacity: 0.6;
+      background: rgba(200, 170, 150, 0.15);
+      display: inline-block;
+      padding: 0.2rem 1.8rem;
+      border-radius: 60px;
+      backdrop-filter: blur(2px);
+      font-size: 0.8rem;
+    }
+
+    /* ===== CATEGORÍAS / TIENDA (grid) ===== */
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin: 2.2rem 0 1rem;
+    }
+
+    .shop-item {
+      background: rgba(250, 240, 235, 0.5);
+      backdrop-filter: blur(2px);
+      padding: 1.6rem 0.5rem;
+      border-radius: 2.5rem;
+      text-align: center;
+      border: 1px solid rgba(255, 225, 210, 0.5);
+      transition: 0.25s ease;
+      box-shadow: 0 6px 16px rgba(140, 90, 60, 0.04);
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+    }
+
+    .shop-item:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 242, 235, 0.7);
+      border-color: rgba(190, 140, 110, 0.4);
+      box-shadow: 0 20px 30px -10px rgba(100, 60, 30, 0.15);
+    }
+
+    .shop-item i {
+      font-size: 2.8rem;
+      color: #7a4d31;
+      margin-bottom: 0.3rem;
+      filter: drop-shadow(0 4px 6px rgba(120, 70, 30, 0.08));
+    }
+
+    .shop-item span {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #342119;
+      letter-spacing: -0.2px;
+    }
+
+    .shop-item small {
+      font-size: 0.7rem;
+      color: #846b5a;
+      opacity: 0.7;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+    }
+
+    /* ===== FOOTER / detalle extra ===== */
+    .store-footer {
+      margin-top: 2.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-top: 1px solid rgba(180, 140, 120, 0.15);
+      padding-top: 1.6rem;
+      font-size: 0.9rem;
+      color: #5f4433;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-social a {
+      color: #6a4b38;
+      font-size: 1.2rem;
+      transition: 0.15s;
+      opacity: 0.5;
+    }
+
+    .footer-social a:hover {
+      color: #955f40;
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    .footer-copy {
+      opacity: 0.6;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+    }
+
+    .footer-copy i {
+      margin-right: 4px;
+      color: #b8683e;
+    }
+
+    /* pequeños ajustes responsivos */
+    @media (max-width: 700px) {
+      .store-card {
+        padding: 1.8rem 1.2rem 2.2rem;
+        border-radius: 2.5rem;
+      }
+      .store-nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+      }
+      .nav-left {
+        justify-content: center;
+      }
+      .nav-links {
+        justify-content: center;
+      }
+      .nav-right {
+        justify-content: center;
+      }
+      .hero-name h1::before,
+      .hero-name h1::after {
+        display: none;
+      }
+      .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .shop-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+      }
+      .nav-links a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="store-card">
+
+    <!-- Menú principal / navegación -->
+    <nav class="store-nav">
+      <div class="nav-left">
+        <div class="nav-logo">
+          <i class="fas fa-store-alt"></i>
+          <span>tienda</span>
+        </div>
+        <div class="nav-links">
+          <a href="#"><i class="fas fa-tag"></i> Ofertas</a>
+          <a href="#"><i class="fas fa-box"></i> Productos</a>
+          <a href="#"><i class="fas fa-clipboard-list"></i> Categorías</a>
+        </div>
+      </div>
+      <div class="nav-right">
+        <button class="nav-icon-btn"><i class="fas fa-search"></i> <span class="hide-mobile">Buscar</span></button>
+        <button class="nav-icon-btn"><i class="fas fa-shopping-bag"></i> <span class="badge">3</span></button>
+        <button class="nav-icon-btn"><i class="fas fa-user-circle"></i> <span class="hide-mobile">Cuenta</span></button>
+      </div>
+    </nav>
+
+    <!-- NOMBRE CENTRAL: Dennis Alexander Baltazar Condori -->
+    <div class="hero-name">
+      <h1>Dennis Alexander Baltazar Condori</h1>
+    </div>
+
+    <!-- Grid de la tienda (categorías / secciones) -->
+    <div class="shop-grid">
+      <div class="shop-item">
+        <i class="fas fa-tshirt"></i>
+        <span>Ropa</span>
+        <small>colección</small>
+      </div>
+      <div class="shop-item">
+        <i class="fas fa-shoe-prints"></i>
+        <span>Calzado</span>
+        <small>nuevos</small>
+      </div>
+      <div class="shop-item">
+        <i class="fas fa-headphones-alt"></i>
+        <span>Audio</span>
+        <small>wireless</small>
+      </div>
+      <div class="shop-item">
+        <i class="fas fa-mug-hot"></i>
+        <span>Hogar</span>
+        <small>decoración</small>
+      </div>
+      <div class="shop-item">
+        <i class="fas fa-book-open"></i>
+        <span>Libros</span>
+        <small>best sellers</small>
+      </div>
+      <div class="shop-item">
+        <i class="fas fa-gem"></i>
+        <span>Accesorios</span>
+        <small>edición</small>
+      </div>
+    </div>
+
+    <!-- Footer con redes y derecho -->
+    <div class="store-footer">
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="footer-copy">
+        <i class="fas fa-crown"></i> Dennis Alexander · 2026
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
