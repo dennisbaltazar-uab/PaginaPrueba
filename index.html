@@ -88,86 +88,108 @@
             </div>
         </section>
 
-        <section id="catalogo">
-            <header>
-                <h2>Catalogo de Productos</h2>
-                <div>
-                    <label for="filter-category">Filtrar por:</label>
-                    <select id="filter-category">
-                        <option value="todos">Todos</option>
-                        <option value="consolas">Consolas</option>
-                        <option value="perifericos">Perifericos</option>
-                        <option value="accesorios">Accesorios</option>
-                    </select>
-                    <label for="sort-price">Ordenar por:</label>
-                    <select id="sort-price">
-                        <option value="default">Relevancia</option>
-                        <option value="price-asc">Menor precio</option>
-                        <option value="price-desc">Mayor precio</option>
-                    </select>
+        <section id="catalogo" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Catálogo de Productos</h2>
+                
+                <div class="row mb-4">
+                    <div class="col-md-6 mx-auto">
+                        <div class="row g-2">
+                            <div class="col-md-6">
+                                <label for="filter-category" class="form-label">Filtrar por:</label>
+                                <select id="filter-category" class="form-select">
+                                    <option value="todos">Todos</option>
+                                    <option value="consolas">Consolas</option>
+                                    <option value="perifericos">Periféricos</option>
+                                    <option value="accesorios">Accesorios</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="sort-price" class="form-label">Ordenar por:</label>
+                                <select id="sort-price" class="form-select">
+                                    <option value="default">Relevancia</option>
+                                    <option value="price-asc">Menor precio</option>
+                                    <option value="price-desc">Mayor precio</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </header>
 
-            <div>
-                <article>
-                    <img src="https://www.playstation.com/es-mx/ps5/" alt="PlayStation 5">
-                    <h3>PlayStation 5</h3>
-                    <p>Categoria: <span>Consolas</span></p>
-                    <p>Precio: <strong>8000 Bs.</strong></p>
-                    <p>Stock: <span>15 unidades</span></p>
-                    <p>Descripcion: Consola de ultima generacion con SSD ultrarrápido</p>
-                    <button>Añadir al carrito</button>
-                    <a href="#producto-ps5">Ver detalles</a>
-                </article>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow">
+                            <img src="https://via.placeholder.com/300x200/0a0a0f/6c2bd9?text=PlayStation+5" class="card-img-top" alt="PlayStation 5">
+                            <div class="card-body">
+                                <h5 class="card-title">PlayStation 5</h5>
+                                <p class="card-text">
+                                    <span class="badge bg-primary">Consolas</span>
+                                </p>
+                                <p class="card-text"><strong>8000 Bs.</strong></p>
+                                <p class="card-text"><small class="text-muted">Stock: 15 unidades</small></p>
+                                <p class="card-text">Consola de última generación con SSD ultrarrápido</p>
+                                <button class="btn btn-primary w-100">Añadir al carrito</button>
+                                <a href="#producto-ps5" class="btn btn-link w-100 mt-2">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="carrito">
-            <header>
-                <h2>Carrito de Compras</h2>
-            </header>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Cantidad</th>
-                        <th>Precio</th>
-                        <th>Subtotal</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>PlayStation 5</td>
-                        <td>
-                            <button>-</button>
-                            <span>1</span>
-                            <button>+</button>
-                        </td>
-                        <td>8000 Bs.</td>
-                        <td>8000 Bs.</td>
-                        <td>
-                            <button>Eliminar</button>
-                        </td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="3"><strong>Total</strong></td>
-                        <td><strong>8000 Bs.</strong></td>
-                        <td>
-                            <button>Vaciar carrito</button>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
-            <div>
-                <form>
-                    <label for="cupon">Codigo de descuento:</label>
-                    <input type="text" id="cupon" placeholder="Ingresa tu cupon">
-                    <button>Aplicar</button>
-                </form>
-                <button>Proceder al pago</button>
+        <section id="carrito" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Carrito de Compras</h2>
+                
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Subtotal</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PlayStation 5</td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <button class="btn btn-outline-secondary">-</button>
+                                        <span class="btn btn-light disabled">1</span>
+                                        <button class="btn btn-outline-secondary">+</button>
+                                    </div>
+                                </td>
+                                <td>8000 Bs.</td>
+                                <td>8000 Bs.</td>
+                                <td>
+                                    <button class="btn btn-danger btn-sm">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="table-light">
+                            <tr>
+                                <td colspan="3" class="text-end"><strong>Total</strong></td>
+                                <td><strong>8000 Bs.</strong></td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm">Vaciar carrito</button>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-md-6 mx-auto">
+                        <form class="d-flex gap-2">
+                            <input type="text" class="form-control" placeholder="Código de descuento">
+                            <button class="btn btn-primary">Aplicar</button>
+                        </form>
+                        <button class="btn btn-success w-100 mt-3">Proceder al pago</button>
+                    </div>
+                </div>
             </div>
         </section>
 
