@@ -10,54 +10,82 @@
 <body>
 
         <header class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
-        <div class="container">
-            <a class="navbar-brand" href="#">Nexus Gamer</a>
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#catalogo">Catalogo</a></li>
-                <li><a href="#consolas">Consolas</a></li>
-                <li><a href="#perifericos">Perifericos</a></li>
-                <li><a href="#accesorios">Accesorios</a></li>
-            </ul>
-        </nav>
-
-        <div>
-            <button>Buscar</button>
-            <button>Carrito</button>
-            <button>Usuario</button>
-        </div>
-    </header>
+            <div class="container">
+                <a class="navbar-brand fw-bold text-uppercase" href="#">
+                    <span class="text-primary">NG</span> Nexus Gamer
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#consolas">Consolas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#perifericos">Periféricos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#accesorios">Accesorios</a></li>
+                    </ul>
+                    
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-light"><i class="bi bi-search"></i></button>
+                        <button class="btn btn-outline-light position-relative">
+                            <i class="bi bi-cart3"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                        </button>
+                        <button class="btn btn-primary"><i class="bi bi-person"></i></button>
+                    </div>
+                </div>
+            </div>
+        </header>
 
     <main>
 
-        <section id="inicio">
-            <h1>Dennis Store</h1>
-            <p>La mejor tienda gamer para consolas y perifericos</p>
-            <a href="#catalogo">Ver Catalogo</a>
+        <section id="inicio" class="bg-primary bg-gradient text-white text-center py-5">
+            <div class="container py-5">
+                <h1 class="display-1 fw-bold">Nexus Gamer</h1>
+                <p class="lead">La mejor tienda gamer para consolas y periféricos</p>
+                <a href="#catalogo" class="btn btn-light btn-lg mt-3">Ver Catálogo</a>
+            </div>
         </section>
 
-        <section id="categorias">
-            <h2>Categorias Destacadas</h2>
-            <ul>
-                <li>
-                    <h3>Consolas</h3>
-                    <p>PlayStation, Xbox, Nintendo Switch</p>
-                    <a href="#consolas">Ver todas</a>
-                </li>
-                <li>
-                    <h3>Perifericos</h3>
-                    <p>Teclados, mouse, audifonos</p>
-                    <a href="#perifericos">Ver todas</a>
-                </li>
-                <li>
-                    <h3>Accesorios</h3>
-                    <p>Fundas, cargadores, cables</p>
-                    <a href="#accesorios">Ver todas</a>
-                </li>
-            </ul>
+        <section id="categorias" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Categorías Destacadas</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center shadow-sm">
+                            <div class="card-body">
+                                <i class="bi bi-controller display-1 text-primary"></i>
+                                <h3 class="card-title">Consolas</h3>
+                                <p class="card-text">PlayStation, Xbox, Nintendo Switch</p>
+                                <a href="#consolas" class="btn btn-primary">Ver todas</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center shadow-sm">
+                            <div class="card-body">
+                                <i class="bi bi-keyboard display-1 text-primary"></i>
+                                <h3 class="card-title">Periféricos</h3>
+                                <p class="card-text">Teclados, mouse, audífonos</p>
+                                <a href="#perifericos" class="btn btn-primary">Ver todas</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center shadow-sm">
+                            <div class="card-body">
+                                <i class="bi bi-headphones display-1 text-primary"></i>
+                                <h3 class="card-title">Accesorios</h3>
+                                <p class="card-text">Fundas, cargadores, cables</p>
+                                <a href="#accesorios" class="btn btn-primary">Ver todas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="catalogo">
