@@ -152,7 +152,6 @@ footer a:hover {
         max-width: 100% !important;
     }
 
-    /* 3. Paddings comodos */
     .container, section {
         padding-left: 1.5rem !important;
         padding-right: 1.5rem !important;
@@ -195,5 +194,31 @@ footer a:hover {
     .d-flex.gap-2 input,
     .d-flex.gap-2 button {
         width: 100% !important;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #inicio {
+        padding: 2rem 1rem !important;
+    }
+
+    #inicio .container {
+        padding: 1rem !important;
+    }
+
+    .table td, .table th {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
     }
 }
