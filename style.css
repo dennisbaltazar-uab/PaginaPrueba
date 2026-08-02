@@ -228,3 +228,94 @@ footer a:hover {
 body {
     overflow-x: hidden;
 }
+
+.oscuro {
+    background-color: #0a0a0f;
+    color: #e8e8e8;
+}
+
+.oscuro section {
+    background-color: #0a0a0f;
+}
+
+.oscuro #categorias {
+    background-color: #14141a !important;
+}
+
+.oscuro #carrito {
+    background-color: #14141a !important;
+}
+
+.oscuro .card {
+    background-color: #1a1a24;
+    border-color: #2a2a3a;
+    color: #e8e8e8;
+}
+
+.oscuro .card .text-muted {
+    color: #8888aa !important;
+}
+
+.oscuro .table {
+    background-color: #1a1a24;
+    color: #e8e8e8;
+}
+
+.oscuro .table-light {
+    background-color: #2a2a3a;
+    color: #e8e8e8;
+}
+
+.oscuro .form-control {
+    background-color: #1a1a24;
+    border-color: #2a2a3a;
+    color: #e8e8e8;
+}
+
+.oscuro .form-control::placeholder {
+    color: #666688;
+}
+
+.oscuro .form-select {
+    background-color: #1a1a24;
+    border-color: #2a2a3a;
+    color: #e8e8e8;
+}
+
+.oscuro footer {
+    background: #0a0a0f !important;
+}
+
+.oscuro .nav-flex {
+    background-color: #0a0a0f;
+}
+
+.oscuro .nav-flex .nav-links a {
+    color: #e8e8e8;
+}
+
+.oscuro .nav-flex .nav-links a:hover {
+    color: #6c2bd9;
+}
+
+.oscuro .nav-flex .nav-actions button {
+    border-color: rgba(255,255,255,0.1);
+    color: #e8e8e8;
+}
+
+.oscuro .nav-flex .nav-actions button:hover {
+    background: #6c2bd9;
+    border-color: #6c2bd9;
+}
+
+.oscuro .badge.bg-primary {
+    background-color: #6c2bd9 !important;
+}
+
+.oscuro a:not(.btn) {
+    color: #a29bfe;
+}
+
+.oscuro a:not(.btn):hover {
+    color: #6c2bd9;
+}
